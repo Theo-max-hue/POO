@@ -21,6 +21,10 @@ class Rider extends Human
         return $this->typeJeu;
     }
 
+    /**
+     * Fonction toString qui reprend l'affichage de la classe humain en ajoutant la variable du rider
+     */
+
     public function __toString(): string
     {
         return parent::__toString() . "Type de jeu : {$this->getTypeJeu()}\n";

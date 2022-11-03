@@ -21,6 +21,10 @@ class Manager extends Human
         return $this->manage;
     }
 
+    /**
+     * Fonction toString qui reprend l'affichage de la classe humain en ajoutant la variable du manager
+     */
+
     public function __toString(): string
     {
         return parent::__toString() . "Manage : {$this->getManage()}\n";

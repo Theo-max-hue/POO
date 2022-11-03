@@ -7,7 +7,7 @@ abstract class Equine extends Animal
     private int $eau;
     private int $compteur = 0;
 
-    public function __construct(String $couleur, int $eau)
+    public function __construct(String $couleur, int $eau, String $nom)
     {
         $this->setId($nom, $couleur)
             ->setCouleur($couleur)
@@ -29,10 +29,18 @@ abstract class Equine extends Animal
         return $this->eau;
     }
 
+    /**
+     * On va créer l'id du canasson dans la fonction setId en récupérant ce qu'il faut du nom et de la couleur
+     */
+
     public function setId($nom, $couleur): string
     {
         return $this->id = "000-" . substr($nom, 0, 1) . "-" . substr($couleur, 0, 1) . "-" . $this->compteur++;
     }
+
+    /**
+     * Dans la fonction setCouleur je teste bien si la couleur rentrée fait partie de celles possibles
+     */
 
     public function setCouleur($couleur): string
     {

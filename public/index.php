@@ -16,3 +16,4 @@ echo $rudolf->__toString();
 
 echo "Test création d'un cheval :\n";
 $miskine = new Sheitland();
+echo $miskine->__toString();
