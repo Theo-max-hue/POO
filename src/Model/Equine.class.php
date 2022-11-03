@@ -47,10 +47,6 @@ abstract class Equine extends Animal
         return $this->$eau;
     }
 
-    public function setCategory()
-    {
-    }
-
     public function setRider()
     {
     }

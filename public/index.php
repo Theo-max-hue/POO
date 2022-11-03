@@ -13,3 +13,6 @@ echo $Clethus->__toString();
 echo "Test création d'un manager :\n";
 $rudolf = new Manager("Iench", "miche", "rue des managers", "490490", "ville", "manager de rue");
 echo $rudolf->__toString();
+
+echo "Test création d'un cheval :\n";
+$miskine = new Sheitland();
