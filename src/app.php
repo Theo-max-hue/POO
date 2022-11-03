@@ -3,6 +3,9 @@
 // Autoloading, pas besoin de require partout pour charger nos classes et chargement
 // automatique de nos librairies
 //require_once __DIR__ . '/../vendor/autoload.php';
+spl_autoload_register(function ($class) {
+    include "Model/{$class}.class.php";
+});
 
 // Définitions de chemins utiles dans l'application
 define('TEMPLATES_DIR', __DIR__ . '/../templates/');

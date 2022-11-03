@@ -4,24 +4,25 @@ class Rider extends Human
 {
     private String $typeJeu;
 
-    public function __construct(String $typeJeu)
+    public function __construct($nom, $adresse, $rue, $codePostal, $ville, $typeJeu)
     {
-        $this->settypeJeu($typeJeu);
+        parent::__construct($nom, $adresse, $rue, $codePostal, $ville);
+        $this->setTypeJeu($typeJeu);
     }
 
-    public function settypeJeu(String $typeJeu)
+    public function setTypeJeu(String $typeJeu)
     {
         $this->typeJeu = $typeJeu;
         return $this;
     }
 
-    public function gettypeJeu(): String
+    public function getTypeJeu(): String
     {
         return $this->typeJeu;
     }
 
     public function __toString(): string
     {
-        return parent::__toString() . "Type de jeu : {$this->getCategorie()}\n";
+        return parent::__toString() . "Type de jeu : {$this->getTypeJeu()}\n";
     }
 }
